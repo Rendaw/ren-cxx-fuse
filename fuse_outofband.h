@@ -5,6 +5,10 @@
 #include <fuse.h>
 #include <fuse_lowlevel.h>
 
+#include <map>
+
+#include "../ren-cxx-basics/variant.h"
+
 // OOBFilesystem : Filesystem : OOBControl
 
 struct OutOfBandControlT

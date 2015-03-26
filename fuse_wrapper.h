@@ -85,7 +85,7 @@ template <typename FilesystemT> struct FuseT
 			{
 				ArgsT Args;
 				Channel = fuse_mount(Path.c_str(), &Args);
-				if (!Channel) throw ConstructionErrorT() << "Couldn't mount filesystem.";
+				if (!Channel) throw CONSTRUCTION_ERROR << "Couldn't mount filesystem.";
 			}
 
 			void Destroy(void)
@@ -201,7 +201,7 @@ template <typename FilesystemT> struct FuseT
 					sizeof(Callbacks),
 					&Filesystem);
 				if (!Context)
-					throw ConstructionErrorT() << "Failed to initialize fuse context.";
+					throw CONSTRUCTION_ERROR << "Failed to initialize fuse context.";
 				Session = fuse_get_session(Context);
 			}
 
