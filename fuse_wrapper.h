@@ -177,12 +177,12 @@ template <typename FilesystemT> struct FuseT
 			PREP_SET_CALLBACK(lock)
 			PREP_SET_CALLBACK(utimens)
 			PREP_SET_CALLBACK(bmap)
-			PREP_SET_CALLBACK(ioctl)
-			PREP_SET_CALLBACK(poll)
-			PREP_SET_CALLBACK(write_buf)
-			PREP_SET_CALLBACK(read_buf)
-			PREP_SET_CALLBACK(flock)
-			PREP_SET_CALLBACK(fallocate)
+			//PREP_SET_CALLBACK(ioctl) // Removed for osxfuse compatibility
+			//PREP_SET_CALLBACK(poll)
+			//PREP_SET_CALLBACK(write_buf)
+			//PREP_SET_CALLBACK(read_buf)
+			//PREP_SET_CALLBACK(flock)
+			//PREP_SET_CALLBACK(fallocate)
 
 #undef PREP_SET_CALLBACK
 
